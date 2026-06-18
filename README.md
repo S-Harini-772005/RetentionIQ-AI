@@ -32,61 +32,39 @@ RetentionIQ AI is an end-to-end AI-powered customer analytics platform designed 
 - SQLAlchemy
 
 ## Architecture
-┌─────────────────────────┐
-│   Customer Data Sources │
-│ (Online Retail Dataset) │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ Data Processing Layer   │
-│ RFM • Cohort Analysis   │
-│ Feature Engineering     │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ PostgreSQL Data Lake    │
-│ Customer Summary Store  │
-└────────────┬────────────┘
-             │
-             ▼
-┌─────────────────────────┐
-│ FastAPI Backend Layer   │
-│ REST APIs • JWT • RBAC  │
-└───────┬─────────┬───────┘
-        │         │
-        ▼         ▼
-┌─────────────┐ ┌─────────────┐
-│ Redis Cache │ │ ML Engine   │
-│ Performance │ │ RandomForest│
-└─────────────┘ └──────┬──────┘
-                        │
-                        ▼
-        ┌─────────────────────────┐
-        │ Churn Prediction Engine │
-        │ Revenue-at-Risk Engine  │
-        └───────────┬─────────────┘
-                    │
-        ┌───────────┴─────────────┐
-        ▼                         ▼
-┌─────────────────┐   ┌─────────────────┐
-│ SHAP Explainable│   │ Retention       │
-│ AI Engine       │   │ Playbook Engine │
-└────────┬────────┘   └────────┬────────┘
-         │                     │
-         └─────────┬───────────┘
-                   ▼
-┌─────────────────────────────────┐
-│ RetentionIQ AI Intelligence Hub │
-└───────────────┬─────────────────┘
-                │
-      ┌─────────┴─────────┐
-      ▼                   ▼
-┌──────────────┐ ┌────────────────┐
-│ Streamlit UI │ │ Power BI Suite │
-│ Executive UI │ │ Business KPIs  │
-└──────────────┘ └────────────────┘
+Online Retail Data
+        │
+        ▼
+Feature Engineering & RFM Analysis
+        │
+        ▼
+PostgreSQL Customer Data Warehouse
+        │
+        ▼
+FastAPI Enterprise Backend
+        │
+ ┌──────┼──────┐
+ ▼      ▼      ▼
+Redis  ML      Auth
+Cache  Engine  RBAC
+        │
+        ▼
+┌──────────────────────────────┐
+│ Customer Intelligence Layer  │
+├──────────────────────────────┤
+│ Churn Prediction             │
+│ Revenue-at-Risk Analysis     │
+│ SHAP Explainability          │
+│ Retention Recommendation AI  │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│ RetentionIQ AI Dashboard     │
+├──────────────────────────────┤
+│ Streamlit Executive Portal   │
+│ Power BI Analytics Suite     │
+└──────────────────────────────┘
 
 ## Business Impact
 

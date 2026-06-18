@@ -32,39 +32,8 @@ RetentionIQ AI is an end-to-end AI-powered customer analytics platform designed 
 - SQLAlchemy
 
 ## Architecture
-Online Retail Data
-        │
-        ▼
-Feature Engineering & RFM Analysis
-        │
-        ▼
-PostgreSQL Customer Data Warehouse
-        │
-        ▼
-FastAPI Enterprise Backend
-        │
- ┌──────┼──────┐
- ▼      ▼      ▼
-Redis  ML      Auth
-Cache  Engine  RBAC
-        │
-        ▼
-┌──────────────────────────────┐
-│ Customer Intelligence Layer  │
-├──────────────────────────────┤
-│ Churn Prediction             │
-│ Revenue-at-Risk Analysis     │
-│ SHAP Explainability          │
-│ Retention Recommendation AI  │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│ RetentionIQ AI Dashboard     │
-├──────────────────────────────┤
-│ Streamlit Executive Portal   │
-│ Power BI Analytics Suite     │
-└──────────────────────────────┘
+<img width="1199" height="1312" alt="ChatGPT Image Jun 18, 2026, 11_10_47 PM" src="https://github.com/user-attachments/assets/ff6dcb85-9e65-437c-8e25-41ba8f4e2351" />
+
 
 ## Business Impact
 
